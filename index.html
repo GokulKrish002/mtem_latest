@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.png" sizes="32x32" />
+    <link rel="icon" href="images/logo.png" sizes="192x192" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Motherstransport</title>
+</head>
+
+<body>
+    <!-- aside -->
+    <aside class="side-contents d-none d-md-block d-lg-none">
+        <button class="btn btn-dark-blue close-btn" id="side-bar-closer">
+            <i class="fa-solid fa-x"> <span class="fs-0">close sidebar</span></i>
+        </button>
+        <ul>
+            <li class="h3"><a href="#">Links</a></li>
+            <li class="fade-up-links"><a href="index.php">Home</a></li>
+            <li class="fade-up-links"><a href="about.php">About</a></li>
+            <li class="fade-up-links"><a href="contact.php">Contact</a></li>
+            <li class="fade-up-links"><a href="gallery.php">Gallery</a></li>
+            <li class="fade-up-links"><a href="services.php">Services</a></li>
+            <li class="fade-up-links"><a href="completedProjects.php">Completed Projects</a></li>
+            <li class="fade-up-links"><a href="ongoingProjects.php">Ongoing Projects</a></li>
+        </ul>
+    </aside>
+
+    <style>
+        .bottom_navbar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding-bottom: 12px;
+            background-color: #3b3b3b;
+            color: white;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bottom_navbar button {
+            font-size: 13px;
+            padding: 12px 12px 4px 12px;
+            border: 0;
+            background-color: transparent;
+            color: white;
+        }
+
+        .bottom_navbar .active {
+            background-color: white;
+            color: black;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    </style>
+
+    <div class="d-block d-md-none bottom_navbar">
+        <div class="d-flex justify-content-around align-items-center text-center w-100">
+            <button class="mobile_nav_btn main_nav1_sm active" data-section="about"><i class="fa-solid fa-house"></i>
+                <p>Home</p>
+                </buttton>
+                <button class="mobile_nav_btn main_nav2_sm" data-section="about"><i class="fa-solid fa-circle-info"></i>
+                    <p>About</p>
+                    </buttton>
+                    <button class="mobile_nav_btn main_nav3_sm" data-section="services"><i
+                            class="fa-solid fa-shapes"></i>
+                        <p>Services</p>
+                        </buttton>
+                        <button class="mobile_nav_btn main_nav4_sm" data-section="why_us"><i
+                                class="fa-solid fa-book-open"></i>
+                            <p>why_us</p>
+                            </buttton>
+                            <button class=""><i class="fa-solid fa-bars"></i>
+                                <p>Menu</p>
+                                </buttton>
+        </div>
+    </div>
+
+    <main>
+        <nav class="px-1 px-md-5">
+            <div class="h-100 d-flex justify-content-between align-items-center">
+                <div class="position-relative">
+                    <div class="logo-container">
+                        <a href="#" class="logo d-block">
+                            <img src="images/logonew.png" class="object-contain" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="d-none d-md-block d-lg-none">
+                    <button name="test" type="button" title="side bar opener" class="btn btn-dark-blue"
+                        id="side-bar-open"> <i class="fa fa-bars"></i></button>
+                </div>
+
+                <div class="align-items-center d-none d-md-flex">
+                    <div class="d-none d-lg-flex align-items-top mr-4">
+                        <div class="mr-2">
+                            <div class="navbar-icon p-1">
+                                <img src="icons/location.png" class="object-contain" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="h6">VELACHERY</p>
+                            <p class="text-secondary">PALLIKARANAI CHENNAI.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-top">
+                        <div class="mr-2">
+                            <div class="navbar-icon p-2">
+                                <img src="icons/mail.png" class="object-contain" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="h6">motherteam12@gmail.com</p>
+                            <p class="text-secondary">Office Hour 09:00am - 05:00pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <ul class="d-flex justify-content-center floating-dropdown-nav-design top-float-dropdown drop-navbar-hide">
+                <li><a href="completedProjects.php" class="floating-projects-link drop-projects">Completed Projects</a>
+                </li>
+                <li><a href="ongoingProjects.php" class="floating-projects-link drop-projects">Ongoing Projects</a></li>
+            </ul>
+        </nav>
+        <!-- <?php include 'include/header.php' ?> -->
+
+        <div id="carouselslider" class="carousel slide" data-ride="carousel" data-interval="3000">
+
+            <ol class="carousel-indicators">
+                <li data-target="#carouselslider" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselslider" data-slide-to="1"></li>
+                <li data-target="#carouselslider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active">
+                    <img src="images/sliders/slider-img-1.png" class="d-block w-100 image-filter object-cover" alt="">
+
+                    <div class="carousel-caption">
+                        <div class="text-left">
+
+                            <p class="carousel-title mt-3">Excavating Excellence<br>Every Time</p>
+                            <p class="carousel-para h6">Your Trusted Partner for Precision Earthworks, Excavation, and
+                                Material
+                                Supply.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative ">
+                    <img src="images/sliders/slider-img-2.png" class="d-block w-100 image-filter object-cover" alt="">
+
+                    <div class="carousel-caption">
+                        <div class="text-left">
+
+                            <p class="carousel-title mt-3">Shaping Landscapes<br>Building Dreams</p>
+                            <p class="carousel-para h6">Bringing Your Projects to Life, Safely and Sustainably. </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative">
+                    <img src="images/sliders/slider-img-3.png" class="d-block w-100 image-filter object-cover" alt="">
+
+                    <div class="carousel-caption">
+                        <div class="text-left">
+                            <p class="carousel-title mt-3">Quality, Precision,<br>and Commitment</p>
+                            <p class="carousel-para h6">We provide Good quality service, at affordable price.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative">
+                    <img src="images/sliders/slider-img-5.png" class="d-block w-100 image-filter object-cover" alt="">
+
+                    <div class="carousel-caption">
+                        <div class="text-left">
+
+                            <p class="carousel-title mt-3">27 years of <br>Experience</p>
+                            <p class="carousel-para h6">we are the The Earthwork Experts you need.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <section class="main_container">
+            <div class="left_side_container">
+                <div class="containers_heading">
+                    <h2>About</h2>
+                    <img src="images/about_img.png" class="left_nav_image left_nav_img1" alt="">
+                    <img src="images/sliders/slider-img-5.png" class="left_nav_image left_nav_img2" alt="">
+                    <img src="images/about_img.png" class="left_nav_image left_nav_img3" alt="">
+                    <img src="images/sliders/slider-img-5.png" class="left_nav_image left_nav_img4" alt="">
+                    <img src="images/about_img.png" class="left_nav_image left_nav_img5" alt="">
+                </div>
+            </div>
+
+            <div class="right_side_container">
+                <div class="sticky-nav">
+                    <ul class="d-flex align-items-center main_nav">
+                        <li class="mainNav_btn active main_nav1" data-section="about">About</li>
+                        <li class="mainNav_btn main_nav2" data-section="services">Services</li>
+                        <li class="mainNav_btn main_nav3" data-section="projects">Projects</li>
+                        <li class="mainNav_btn main_nav4" data-section="why_us">Why us</li>
+                        <li class="mainNav_btn main_nav5" data-section="client">Client</li>
+                    </ul>
+                </div>
+                <div class="main_sections" id="about" data-side_heading="About" data-side_image="left_nav_img1" data-nav_active="main_nav1">
+                    <div class="container">
+                        <p class="main_section_heading my-3">About US</p>
+                        <p class="background_text">About us</p>
+                        <p data-aos="fade-right" data-aos-duration="2000">In the very Beginning</p>
+                        <i class="main_section_underline"></i>
+                    </div>
+                    <div class="container mt-lg-5 mt-3">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="about-img">
+                                    <img src="images/new_img/mt_images (9).jpg" class="object-cover" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 bg-white">
+                                <p class="p-2">
+                                    In the late 1990s, the story of Mother Transport began with a passionate and
+                                    hardworking
+                                    individual, Mr.
+                                    R. KUPPUSAMY. From the humble role of a laborer, he quickly rose to become a labor
+                                    contractor, and by
+                                    2001, he was handling the supply of bulk materials with just a single lorry. A
+                                    visionary in
+                                    the making,
+                                    he expanded his endeavors, diving into both labor contracting and material supply,
+                                    laying
+                                    the foundation
+                                    for Mother Transport.
+                                </p>
+                                <div class="text-center text-md-left my-2">
+                                    <a href="#" class="btn btn-dark-blue p-2">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="row mt-lg-5 mt-md-3 mt-2 ml-1 py-3 text-center bg-light" id="triggerElement">
+                        <li class="col-lg-3 col-md-3 col-6 mb-2 mb-md-0">
+                            <p class="h3 mb-0">34+</p>
+                            <p class="text-mtem font-weight-bold">Projects Done</p>
+                        </li>
+                        <li class="col-lg-3 col-md-3 col-6 mb-2 mb-md-0">
+                            <p class="h3 mb-0">33+</p>
+                            <p class="text-mtem font-weight-bold">Happy Customers</p>
+                        </li>
+                        <li class="col-lg-3 col-md-3 col-6 mb-2 mb-md-0">
+                            <p class="h3 mb-0">56+</p>
+                            <p class="text-mtem font-weight-bold">Active Vehicles</p>
+                        </li>
+                        <li class="col-lg-3 col-md-3 col-6 mb-2 mb-md-0">
+                            <p class="h3 mb-0">27+</p>
+                            <p class="text-mtem font-weight-bold">Years Of Experience</p>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="main_sections" id="services" data-side_heading="Services" data-side_image="left_nav_img2" data-nav_active="main_nav2">
+
+                    <div class="container">
+                        <p class="main_section_heading my-3">Services we offer</p>
+                        <p class="background_text">Services</p>
+                        <p data-aos="fade-right" data-aos-duration="2000">In the very Beginning</p>
+                        <i class="main_section_underline"></i>
+
+                        <p class="mt-3">
+                            At Mothers Transport, we offer a comprehensive suite of construction services to bring your
+                            vision
+                            to
+                            life. From sturdy foundations to expert construction, reliable material supply, efficient
+                            demolitions,
+                            and road projects, we've got it all covered.
+                        </p>
+                        <p class="mt-3 mb-5">
+                            we don't just provide services, we forge partnerships. We are your trusted partner in
+                            progress,
+                            dedicated to delivering excellence in every service we offer. Whether you're planning a new
+                            project
+                            or
+                            seeking support for your transportation and infrastructure needs, we are here to elevate
+                            your
+                            endeavors.
+                        </p>
+
+                        <div class="row our_services">
+                            <div class="col-lg-4">
+                                <div class="services_img">
+                                    <img src="images/services/road_works.jpg" class="object-cover" alt="">
+                                    <div class="services_content d-flex justify-content-center align-items-center">
+                                        <p>Road Works</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="services_img">
+                                    <img src="images/services/raw-material.png" class="object-cover" alt="">
+                                    <div class="services_content d-flex justify-content-center align-items-center">
+                                        <p>Material supply</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="services_img">
+                                    <img src="images/services/excavation_works.png" class="object-cover" alt="">
+                                    <div class="services_content d-flex justify-content-center align-items-center">
+                                        <p>Excavation Works</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center text-md-left my-2">
+                            <a href="#" class="btn btn-dark-blue p-2">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_sections" id="projects" data-side_heading="Projects" data-side_image="left_nav_img3" data-nav_active="main_nav3">
+                    <div class="container">
+                        <p class="main_section_heading my-3">Projects</p>
+                        <p class="background_text">Projects</p>
+                        <p>At MTEM, our work speaks for itself.</p>
+                        <i class="main_section_underline"></i>
+                        <p class="mt-3">
+                            We take pride in a rich portfolio of successfully completed projects that showcase our
+                            expertise,
+                            dedication, and commitment to excellence. Explore some of our most notable achievements
+                            below:
+                        </p>
+                        <div class="home_page_slider">
+
+                            <div class="p-3">
+                                <a href="#" title="GC Lifespace" class="d-block home_project-container">
+                                    <img src="images/projects/gclifespace.jpg" class="object-cover" alt="">
+                                    <div class="project-content-show">
+                                        <p class="project-title">
+                                            <span class="text-primary">Kovilambakkam</span>
+                                            GC Lifespace
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-3">
+                                <a href="#" title="GC Lifespace" class="d-block home_project-container">
+                                    <img src="images/projects/chandrakala.jpg" class="object-cover" alt="">
+                                    <div class="project-content-show">
+                                        <p class="project-title">
+                                            <span class="text-primary">ECR</span>
+                                            Chandrakala Resort
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-3">
+                                <a href="#" title="GC Lifespace" class="d-block home_project-container">
+                                    <img src="images/projects/grand_style_akkarai_site.jpg" class="object-cover" alt="">
+                                    <div class="project-content-show">
+                                        <p class="project-title">
+                                            <span class="text-primary">Akkarai</span>
+                                            Grand Style Road Rork
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-3">
+                                <a href="#" title="GC Lifespace" class="d-block home_project-container">
+                                    <img src="images/projects/power_hydra_nallur.jpg" class="object-cover" alt="">
+                                    <div class="project-content-show">
+                                        <p class="project-title">
+                                            <span class="text-primary">Nallur</span>
+                                            Power Hydra Nallur
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="text-center text-md-left my-2">
+                            <a href="#" class="btn btn-dark-blue p-2">See more of our projects</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="main_sections" id="why_us" data-side_heading="Why us" data-side_image="left_nav_img4" data-nav_active="main_nav4">
+                    <div class="container">
+                        <p class="main_section_heading my-3">Why to choose us</p>
+                        <p class="background_text">Why to choose us</p>
+                        <p>The Path that made us to be a great.</p>
+                        <i class="main_section_underline"></i>
+
+                        <p class="mt-3">
+                            We offer a diverse range of services to cater to your needs, including Foundation Works,
+                            Road Work, Material Supply, and Demolition Work. With our experienced team and top-notch
+                            equipment, your projects are in safe hands.
+                        </p>
+                    </div>
+                </div>
+                <div class="main_sections" id="client" data-side_heading="Clients" data-side_image="left_nav_img5" data-nav_active="main_nav5">
+                    <div class="container">
+                        <p class="main_section_heading my-3">Clients</p>
+                        <p class="background_text">Client</p>
+                        <p>The Path that made us to be a great.</p>
+                        <i class="main_section_underline"></i>
+                        <p class="mt-3">
+                            In the late 1990s, the story of Mother Transport began with a passionate and hardworking
+                            individual,
+                            Mr.
+                            R. KUPPUSAMY. From the humble role of a laborer, he quickly rose to become a labor
+                            contractor, and
+                            by
+                            2001, he was handling the supply of bulk materials with just a single lorry. A visionary in
+                            the
+                            making,
+                            he expanded his endeavors, diving into both labor contracting and material supply, laying
+                            the
+                            foundation
+                            for Mother Transport.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- <?php include 'include/footer.php' ?> -->
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.project-container').magnificPopup({
+                type: 'image', gallery: {
+                    enabled: true
+                }, image: {
+                    titleSrc: 'title'
+                }
+            });
+        });
+
+        $('.parallax-window').parallax({ imageSrc: 'images/scroll-bg.webp' });
+        $('.about_img').parallax({ imageSrc: 'about_img.png' });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.to('.main_nav', {
+                scrollTrigger: {
+                    trigger: '.main_container',
+                    start: 'top top',
+                    end: 'bottom top',
+                    pin: '.sticky-nav',
+                    zIndex: 99,
+                    pinSpacing: false,
+                    onToggle: function (self) {
+                        if (self.isActive) {
+                            gsap.set('.sticky-nav', { zIndex: 99 });
+                        } else {
+                            gsap.set('.sticky-nav', { zIndex: 1 });
+                        }
+                    }
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            gsap.utils.toArray('.main_sections').forEach(function (section, index) {
+                gsap.to(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top center',
+                        end: 'bottom center',
+                        onToggle: function (self) {
+
+                            if (self.isActive) {
+                                var headingElement = document.querySelector('.containers_heading h2');
+                                $(headingElement).html(self.vars.trigger.dataset.side_heading);
+                                $('.left_nav_image').hide();
+                                $('.'+self.vars.trigger.dataset.side_image).show();
+                                if (window.innerWidth > 650) {
+                                    $('.mainNav_btn').removeClass('active');
+                                    $('.' + self.vars.trigger.dataset.nav_active).addClass('active');
+                                } else {
+                                    $('.mobile_nav_btn').removeClass('active');
+                                    $('.' + self.vars.trigger.dataset.nav_active + '_sm').addClass('active');
+                                }
+                                document.querySelector('.left_nav_image')
+                            }
+                        }
+                    }
+                });
+            });
+        });
+
+        document.querySelectorAll('.main_nav li').forEach(function (li) {
+            li.addEventListener('click', function () {
+                var sectionId = this.getAttribute('data-section');
+                var destination = document.getElementById(sectionId).offsetTop + window.innerHeight - (window.innerHeight * 10 / 100); // 10vh
+                gsap.to(window, { scrollTo: { y: destination, autoKill: false }, duration: 0.8 });
+            });
+        });
+        document.querySelectorAll('.bottom_navbar .mobile_nav_btn').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var sectionId = this.getAttribute('data-section');
+                var destination = document.getElementById(sectionId).offsetTop; // 10vh
+                gsap.to(window, { scrollTo: { y: destination, autoKill: false }, duration: 0.8 });
+            });
+        });
+
+        $('.our_services').slick({
+            dots: false,
+            infinite: true,
+            arrows: false,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        $('.home_page_slider').slick({
+            dots: false,
+            infinite: true,
+            arrows: false,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        $('.our_done_projects').slick({
+            dots: false,
+            infinite: true,
+            arrows: false,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+    </script>
+</body>
+
+</html>
